@@ -1,1 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: rgb(141, 218, 179);
+}
+.contenedor{
+    display: grid;
+    grid-gap: 20px;
+    /* parámetros de repeat, primero cuantos y luego el tamaño */
+    grid-template-columns: repeat(3, minmax(200px, auto));
+    grid-template-rows: repeat(3, minmax(200px, auto));
 
+    grid-template-areas: "titulo titulo titulo"
+                          "pregunta pregunta pregunta" 
+                          " factorial imparPar primo ";
+}
+
+.titulo{
+    grid-area: titulo;
+}
+
+.titulo h1{
+    margin-left: 40%;
+}
+
+.pregunta{
+    grid-area: pregunta;
+}
+
+.pregunta p{
+    margin-left: 20%;
+    margin-top: 1%;
+}
+
+.numFact{
+    height: 10%;
+    width: 50%;
+    border-bottom: solid 1px black;
+}
+
+.factorial{
+    grid-area: factorial;
+}
+.imparPar{
+    grid-area:imparPar;
+}
+.primo{
+    grid-area:primo;
+}
+
+.numParImp{
+    height: 10%;
+    width: 50%;
+    border-bottom: solid 1px black;
+}
+
+.numPrimo{
+    height: 10%;
+    width: 50%;
+    border-bottom: solid 1px black;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        display: grid;
+        /* parámetros de repeat, primero cuantos y luego el tamaño */
+        grid-template-columns: repeat(3, minmax(200px, auto));
+        grid-template-rows: repeat(5, minmax(100px, auto));
+    
+        grid-template-areas: "titulo titulo titulo"
+                              "pregunta pregunta pregunta" 
+                              " factorial factorial factorial "
+                              "imparPar imparPar imparPar"
+                              "primo primo primo";
+    }
+
+    .titulo h1{
+        margin-left: 20%;
+    }
+}
+
+.estilosAdicionales{
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    border: solid 2px black;
+}
