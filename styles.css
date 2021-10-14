@@ -63,21 +63,37 @@ body{
 }
 
 @media screen and (max-width: 768px){
-    .contenedor{
+ .contenedor{
         display: grid;
         /* parámetros de repeat, primero cuantos y luego el tamaño */
-        grid-template-columns: repeat(3, minmax(200px, auto));
+        grid-template-columns: repeat(1, minmax(200px, auto));
         grid-template-rows: repeat(5, minmax(100px, auto));
     
-        grid-template-areas: "titulo titulo titulo"
-                              "pregunta pregunta pregunta" 
-                              " factorial factorial factorial "
-                              "imparPar imparPar imparPar"
-                              "primo primo primo";
+        grid-template-areas: "titulo "
+                              "pregunta " 
+                              " factorial  "
+                              "imparPar"
+                              "primo "
     }
 
     .titulo h1{
         margin-left: 20%;
+    }
+
+    .numFact{
+        height: 20%;
+        width: 50%;
+        border-bottom: solid 1px black;
+    }
+    .numParImp{
+        height: 20%;
+        width: 50%;
+        border-bottom: solid 1px black;
+    }
+    .numPrimo{
+        height: 20%;
+        width: 50%;
+        border-bottom: solid 1px black;
     }
 }
 
