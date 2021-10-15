@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 body{
     margin: 0;
@@ -63,7 +63,7 @@ body{
 }
 
 @media screen and (max-width: 768px){
-    .contenedor{
+ .contenedor{
         display: grid;
         /* parámetros de repeat, primero cuantos y luego el tamaño */
         grid-template-columns: repeat(1, minmax(200px, auto));
